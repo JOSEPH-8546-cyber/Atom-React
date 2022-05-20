@@ -13,7 +13,15 @@
   <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
-<script src="./React.js"></script>
+<style media="screen">
+  body {
+    background-image: url('https://s1.1zoom.me/b5045/893/Canada_Lake_Forests_511363_1920x1080.jpg');
+    color: white;
+    text-align: justify;
+    font-size: 25px;
+  }
+</style>
+
 </head>
 
 <body>
@@ -21,132 +29,27 @@
 
   <h2 id="proof"></h2>
 
-  <script type="text/babel">
+  <p id="mq"></p>
 
-  // funcion normales
-  alertHello = function () {
-    alert('Hello Joseph');
-  }
+  <p id="mw"></p>
 
-  
+  <!-- ejemplo usando this -->
 
-  /*  class Header {
-      constructor() {
-        this.color = "Red";
-      }
-     changeColor = function () {
-        document.getElementById("mydiv").innerHTML += this;
-      }
-    }
+  <button type="button" name="button" id="me">click me</button>
 
-const myheader = new Header();
+<p id="mr"></p>
 
-window.addEventListener("load", myheader.changeColor);
+<p id="mi"></p>
 
-document.getElementById("btn").addEventListener("click", myheader.changeColor);
-*/
-
-/* funciones de flecha y normales
-
-  const hello = (val) => "Hello Joseph" + val;
-
-
-  document.getElementById("mydiv").innerHTML = hello(", How are you?");
-
-  console.log(hello);
-
-*/
-
-
-/* primera clase
-
-  class Car {
-    constructor(name) {
-      this.brand = name;
-    }
-  }
-
-const mycar = new Car("Ferrari")
-
-document.write(mycar.brand)
-*/
-
-
-/* segunda clase (usando un metodo agregado)
-class Car {
-  constructor(name, color) {
-    this.brand = name;
-    this.color = color;
-  }
-
-  present() {
-    return 'I have a ' + this.brand + ' of color ' + this.color;
-  }
-
-}
-
-const mycar = new Car("Ford","Green");
-
-document.write(mycar.present())
-
-*/
-
-
-/* tercera class con herencia.
-
-class Car {
-  constructor(name, num) {
-    this.brand = name;
-    this.num = num;
-  }
-
-  present() {
-    return 'I have a ' + this.brand + ' model number ' + this.num;
-
-  }
-}
-
-class Model extends Car {
-  constructor(name, num, color, mod) {
-    super(name, num);
-    this.color = color;
-    this.model = mod;
-
-  }
-
-  show() {
-    return this.present() + ' of color ' + this.color + ', it is a ' + this.model;
-  }
-}
-
-const mycar = new Model("Chevy", 89, "yellow", "Avalanche");
-document.write(mycar.show());
-
-*/
-
-
-
-
-
-/*
-function Hello() {
-  return <h1>Hello Joseph</h1>;
-}
-
-
-*/
+<p id="mp"></p>
 
 
 
 
 
 
-ReactDOM.render(<Hello />, document.getElementById('mydiv'))
 
-
-</script>
-
-
+  <script src="./React.js"></script>
 
 </body>
 
