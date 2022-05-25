@@ -99,10 +99,15 @@ const vehiculeOne = {
 
 myVehicule(vehiculeOne);
 
-function myVehicule({type, color, brand, model}) {
+function myVehicule({
+  type,
+  color,
+  brand,
+  model
+}) {
   const message = 'My ' + type + ' is a ' + color + ', ' + brand + ', ' + model + '.';
 
-document.getElementById("mp").innerHTML = message;
+  document.getElementById("mp").innerHTML = message;
 }
 
 //otra forma de hacerlo
@@ -139,37 +144,75 @@ function myVehicle({ model, registration: { state } }) {
 
 //operador de propagación o spread
 
-    //ejemplo 1
-    const numbersOne = [4, 8, 3];
-    const numbersTwo = [5, 9, 4];
+//ejemplo 1
+const numbersOne = [4, 8, 3];
+const numbersTwo = [5, 9, 4];
 
-    const numbersCombined = [...numbersOne, ...numbersTwo];
+const numbersCombined = [...numbersOne, ...numbersTwo];
 
-    document.write(numbersCombined);
+document.write(numbersCombined);
 
-    //ejemplo 2: usando destructuracion y el operador de extención
-    const numbers = [1, 2, 3, 4, 5, 9, 10]
+//ejemplo 2: usando destructuracion y el operador de extención
+const numbers = [1, 2, 3, 4, 5, 9, 10]
 
-    const [one, two, ...rest] = numbers;
+const [one, two, ...rest] = numbers;
 
-    document.write("<p>" + one + "</p>");
-    document.write("<p>" + two + "</p>");
-    document.write("<p>" + rest + "</p>");
+document.write("<p>" + one + "</p>");
+document.write("<p>" + two + "</p>");
+document.write("<p>" + rest + "</p>");
 
-    //ejemplo 3: usando objetos
-    const myVehicle = {
-      brand: 'Ford',
-      model: 'Mustang',
-      color: 'red'
-    }
+//ejemplo 3: usando objetos
+const myVehicle = {
+  brand: 'Ford',
+  model: 'Mustang',
+  color: 'red'
+}
 
-    const updateMyVehicle = {
-      type: 'car',
-      year: 2021,
-      color: 'yellow'
-    }
+const updateMyVehicle = {
+  type: 'car',
+  year: 2021,
+  color: 'yellow'
+}
 
-    const myUpdatedVehicle = {...myVehicle, ...updateMyVehicle}
+const myUpdatedVehicle = {
+  ...myVehicle,
+  ...updateMyVehicle
+}
 
-    //Check the result object in the console:
-    console.log(myUpdatedVehicle);
+//Check the result object in the console:
+console.log(myUpdatedVehicle);
+
+
+//condicionales
+
+/* if and else */
+function renderApp() {
+  document.getElementById('ma').innerHTML = "Welcome !";
+}
+
+function renderlogin() {
+  document.getElementById("ma").innerHTML = "Please login";
+}
+
+let auth = true;
+
+if (auth) {
+  renderApp();
+} else {
+  renderlogin();
+}
+
+//operador ternario
+function render_app() {
+  document.getElementById("ms").innerHTML = "hello";
+}
+
+function render_login() {
+  document.getElementById('ms').innerHTML = "hola";
+}
+
+let auto = true;
+
+auto ? render_app() : render_login();
+
+//
